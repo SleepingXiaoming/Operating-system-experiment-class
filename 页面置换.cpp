@@ -174,19 +174,7 @@ void LRU(vector<int> sequence)
                 lru_count++;
                 Lru temp;
                 temp.l = sequence[i];
-                cout << "展示" << endl;
-                for (auto qq : lru)
-                {
-                    cout << qq.l << "   " << qq.times << endl;
-                }
-                cout << endl;
                 sort(lru.begin(), lru.end(), cmp);
-                cout << "sorted" << endl;
-                for (auto qq : lru)
-                {
-                    cout << qq.l << "   " << qq.times << endl;
-                }
-                cout << endl;
                 cout << "发生缺页中断" << sequence[i]
                      << "号页面置入内存" << lru[2].l << "被调出内存" << endl;
                 lru[2] = temp;
